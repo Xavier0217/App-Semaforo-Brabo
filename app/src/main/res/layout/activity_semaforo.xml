@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SemaforoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSemaforo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#002F67"
+        android:backgroundTint="#002F67"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="SEMÁFORO BRABO"
+        app:titleTextColor="#FBFBFB" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbarSemaforo">
+
+        <TextView
+            android:id="@+id/textViewTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="Bem Vindo(a)! "
+            android:textAlignment="center"
+            android:textSize="34dp" />
+
+        <TextView
+            android:id="@+id/textViewStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚦"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textSize="50sp" />
+
+        <Switch
+            android:id="@+id/switchTodosOsLeds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="Ligar Todos os Leds"
+            android:textSize="20sp" />
+
+        <Switch
+            android:id="@+id/switchLedVermelho"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="Ligar Led Vermelho"
+            android:textSize="20sp" />
+
+        <Switch
+            android:id="@+id/switchLedAmarelo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="Ligar Led Amarelo"
+            android:textSize="20sp" />
+
+        <Switch
+            android:id="@+id/switchLedVerde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:text="Ligar Led Verde"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="30sp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonVermelho"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_margin="5sp"
+                android:layout_weight="1"
+                android:backgroundTint="#D1D1D1"
+                android:enabled="false" />
+
+            <Button
+                android:id="@+id/buttonAmarelo"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_margin="5sp"
+                android:layout_weight="1"
+                android:backgroundTint="#D1D1D1"
+                android:enabled="false" />
+
+            <Button
+                android:id="@+id/buttonVerde"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_margin="5sp"
+                android:layout_weight="1"
+                android:backgroundTint="#D1D1D1"
+                android:enabled="false" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/buttonDeslogar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginRight="70dp"
+            android:backgroundTint="#980000"
+            android:text="Deslogar"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            app:rippleColor="#D80000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:gravity="right|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dúvidas?"
+            android:textSize="20dp" />
+
+        <ImageButton
+            android:id="@+id/imageButtonDuvidas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/baseline_arrow_forward_24"
+            android:background="@android:color/transparent"
+            />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
